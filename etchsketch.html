@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch Sketch</title>
+    <link rel="stylesheet" href="etchsketch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Etch Sketch</h1>
+    <h2>Enter a grid per side and choose a color</h2>
+    <form id="changediv">
+        <input type="text" inputmode="numeric" id="divlength" name="divlength" min="1" max="100"><br>   
+        <input type="submit" id="changebtn" value="Submit">
+      </form>
+    <div id="color-picker"></div>
+    <div id="container"></div>
+    <button>clear</button>
+    <script>
+
+    document.getElementById("changediv").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let changediv = document.getElementById("divlength").value;
+        changediv = Number(changediv);
+
+        console.log(`${changediv} was entered`); 
+        return changediv;
+    });
+
+
+    
+    function genContainer(changediv){
+        const container = document.getElementById("container");
+        container.style.gridTemplateColumns = `repeat(${changediv}), 1fr`
+        container.style.gridTemplateColumns = `repeat(${changediv}), 1fr`
+        console.log(`grid was made`); 
+    }
+
+
+    
+    
+    </script>
+</body>
+</html>
