@@ -9,8 +9,11 @@ document.getElementById("changediv").addEventListener("submit", function(event) 
 
 
 function genContainer(changediv){
-    const container = document.getElementById("container");
-    container.style.gridTemplateColumns = `repeat(${changediv}), 1fr`
-    container.style.gridTemplateColumns = `repeat(${changediv}), 1fr`
-
+    
 }
+
+document.addEventListener("DOMContentLoaded", function()
+{const container = document.getElementById("container");
+    container.style.gridTemplateColumns = `repeat(16), 1fr`
+    container.style.gridTemplateRows = `repeat(16), 1fr`
+})
